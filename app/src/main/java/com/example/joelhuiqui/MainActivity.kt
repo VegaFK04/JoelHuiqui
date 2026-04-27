@@ -37,6 +37,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import com.example.joelhuiqui.ui.theme.CRUZAZUL.MIbottomBar
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.SensorAcel
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.Sensor_temperatura
 import com.example.joelhuiqui.ui.theme.JoelHuiquiTheme
@@ -80,7 +81,7 @@ class MainActivity : ComponentActivity() {
             }
                 ) { innerPadding ->
                    //Tempscreen()
-                    Tempscreen()
+                    MIbottomBar()
                 }
             }
         }
