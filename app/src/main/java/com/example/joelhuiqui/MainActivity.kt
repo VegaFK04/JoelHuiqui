@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.MIbottomBar
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.SensorAcel
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.Sensor_temperatura
+import com.example.joelhuiqui.ui.theme.CRUZAZUL.navegacoin
 import com.example.joelhuiqui.ui.theme.JoelHuiquiTheme
 
 class MainActivity : ComponentActivity() {
@@ -56,33 +57,16 @@ class MainActivity : ComponentActivity() {
                         titleContentColor = MaterialTheme.colorScheme.primary,
                     ),
                     title = {
-                  Text(text = "hola")
+                  Text(text = "This is a Top Bar")
                     }
 
                 )
 
             },
-            bottomBar = {
-                BottomAppBar(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    contentColor = MaterialTheme.colorScheme.primary,
-                )
-                {
-                    Text(
-                        modifier = Modifier.fillMaxWidth(),
-                        textAlign = TextAlign.Center,
-                        text = "Bottom app bar",
-                    )
-                }
-            },
-            floatingActionButton = {
-                FloatingActionButton(onClick = { }) {
-                    Icon(Icons.Default.Add, contentDescription = "Add")
-                }
-            }
+            bottomBar = {MIbottomBar()}
                 ) { innerPadding ->
                    //Tempscreen()
-                    MIbottomBar()
+                    navegacoin()
                 }
             }
         }
