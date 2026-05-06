@@ -18,13 +18,15 @@ import androidx.navigation.NavController
 @Composable
 fun MainScreen(navController: NavController){
     var tf_state by remember { mutableStateOf("") }
+    var tf_pass by remember { mutableStateOf("") }
     Column (modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally){
-        TextField(value = tf_state, onValueChange = {tf_state=it}, label = {Text("nombre")})
+        TextField(value = tf_state, onValueChange = {tf_state=it}, label = {Text("nombre de usuario")})
+        TextField(value = tf_pass, onValueChange = {tf_pass=it}, label = {Text("contraseña")})
 
         Text("contenido principal")
-        Button(onClick = {navController.navigate("Second" + "/${tf_state.toString()}")}) {
+        Button(onClick = {navController.navigate("Second" + "/${tf_state.toString()}/${tf_pass.toString()}")}) {
             Text("Saludar")
         }
     }
