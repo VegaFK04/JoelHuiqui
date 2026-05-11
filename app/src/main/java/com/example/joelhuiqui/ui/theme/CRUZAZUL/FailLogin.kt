@@ -20,9 +20,8 @@ fun FailLogin (navController: NavController){
         Text("Usuario no Autorizado")
         Button(modifier = Modifier.fillMaxWidth(), onClick = {
             navController.navigate("main")
-        }) { 
+        }) {
             Text("Regresar a Login")
         }
     }
-
 }

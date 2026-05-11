@@ -12,7 +12,7 @@ fun navegacoin() {
     {
 
         composable("main") { MainScreen(navcontroller) }
-        composable("Second" + "/{nombre/{pass}") {
+        composable("Second" + "/{nombre}/{pass}") {
 
             val name = it.arguments?.getString("nombre")
             val pass = it.arguments?.getString("Contraseña")
