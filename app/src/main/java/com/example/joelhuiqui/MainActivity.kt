@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -37,7 +38,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import com.example.joelhuiqui.ui.theme.CRUZAZUL.Actualizar
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.MIbottomBar
+import com.example.joelhuiqui.ui.theme.CRUZAZUL.MiIcono
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.SensorAcel
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.Sensor_temperatura
 import com.example.joelhuiqui.ui.theme.CRUZAZUL.navegacoin
@@ -66,7 +69,8 @@ class MainActivity : ComponentActivity() {
             bottomBar = {MIbottomBar()}
                 ) { innerPadding ->
                    //Tempscreen()
-                    navegacoin()
+                    val viewModel by viewModels<MiIcono>()
+                    Actualizar(viewModel)
                 }
             }
         }
